@@ -1,0 +1,445 @@
+:root {
+  --primary: #00aaff;
+  --secondary: #0077cc;
+  --accent: #66ccff;
+  --dark: #0a0a0a;
+  --darker: #000;
+  --light: #e0e0e0;
+  --gray: #888;
+  --success: #00cc66;
+  --warning: #ffaa00;
+  --danger: #ff3333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: radial-gradient(circle at center, var(--dark) 0%, var(--darker) 100%);
+  color: var(--light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Navigation */
+.navbar {
+  background: linear-gradient(90deg, #001f3f, #003366);
+  padding: 1rem 0;
+  box-shadow: 0 0 20px var(--secondary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, text-shadow 0.3s;
+  cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary);
+}
+
+/* Sections */
+.section {
+  display: none;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+}
+
+.section.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba(0, 170, 255, 0.1), rgba(0, 119, 204, 0.1));
+  border-radius: 10px;
+  border: 2px solid var(--primary);
+  margin-bottom: 3rem;
+  box-shadow: 0 0 30px rgba(0, 170, 255, 0.2);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.hero .title-large {
+  font-size: 4rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.hero h3 {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.hero .subtitle {
+  font-size: 1.2rem;
+  color: var(--light);
+  margin-bottom: 1.5rem;
+}
+
+.hero .author {
+  font-size: 1.3rem;
+  color: var(--primary);
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.hero .tagline {
+  font-size: 0.95rem;
+  color: var(--gray);
+  font-style: italic;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.button {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.button.primary {
+  background: var(--secondary);
+  color: white;
+}
+
+.button.primary:hover {
+  background: var(--primary);
+  box-shadow: 0 0 20px var(--primary);
+  transform: translateY(-2px);
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.button.secondary:hover {
+  background: var(--primary);
+  color: var(--darker);
+  box-shadow: 0 0 20px var(--primary);
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 3rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 10px var(--secondary);
+}
+
+.subtitle-text {
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Part Sections */
+.part-section {
+  margin-bottom: 4rem;
+}
+
+.part-title {
+  font-size: 1.8rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--secondary);
+}
+
+/* Laws Grid */
+.laws-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.law-card {
+  background: linear-gradient(135deg, rgba(0, 170, 255, 0.05), rgba(0, 119, 204, 0.05));
+  border: 1px solid var(--secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.law-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 170, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.law-card:hover::before {
+  left: 100%;
+}
+
+.law-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.3);
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, rgba(0, 170, 255, 0.1), rgba(0, 119, 204, 0.1));
+}
+
+.law-number {
+  display: inline-block;
+  background: var(--secondary);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.law-title {
+  font-size: 1.2rem;
+  color: var(--primary);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.law-quote {
+  font-size: 0.95rem;
+  color: var(--accent);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.law-description {
+  font-size: 0.9rem;
+  color: var(--light);
+  line-height: 1.5;
+  display: none;
+}
+
+.law-card.expanded .law-description {
+  display: block;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--secondary);
+}
+
+.law-toggle {
+  font-size: 0.8rem;
+  color: var(--primary);
+  cursor: pointer;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+/* Reference Table */
+#reference-table {
+  overflow-x: auto;
+}
+
+.reference-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.reference-table thead {
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+}
+
+.reference-table th {
+  padding: 1rem;
+  text-align: left;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.reference-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--secondary);
+  color: var(--light);
+  font-size: 0.9rem;
+}
+
+.reference-table tbody tr:hover {
+  background: rgba(0, 170, 255, 0.1);
+}
+
+.reference-table .law-num {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.reference-table .tool-badge {
+  display: inline-block;
+  background: var(--secondary);
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+/* Framework Grid */
+.framework-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.framework-card {
+  background: linear-gradient(135deg, rgba(0, 170, 255, 0.1), rgba(0, 119, 204, 0.1));
+  border-left: 4px solid var(--primary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.framework-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.framework-card p {
+  color: var(--light);
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(90deg, #001f3f, #003366);
+  padding: 2rem;
+  text-align: center;
+  border-top: 2px solid var(--secondary);
+  margin-top: 4rem;
+}
+
+.footer p {
+  color: var(--light);
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.footer p:first-child {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero .title-large {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .laws-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .framework-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reference-table th,
+  .reference-table td {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+}

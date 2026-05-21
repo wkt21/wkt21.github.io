@@ -5,82 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The 50 Laws of Kali Power</title>
   <link rel="icon" href="dragon-icon.png" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
-      color: #e0e0e0;
-      text-align: center;
-    }
-    header {
-      background: linear-gradient(90deg, #001f3f, #003366);
-      padding: 2rem 1rem;
-      box-shadow: 0 0 20px #00aaff;
-    }
-    h1 {
-      font-size: 2.5rem;
-      color: #00aaff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-    h2 {
-      color: #66ccff;
-      margin-top: 0.5rem;
-    }
-    .cover {
-      margin: 2rem auto;
-      max-width: 400px;
-      border: 2px solid #00aaff;
-      box-shadow: 0 0 30px #0077cc;
-      border-radius: 10px;
-    }
-    .button {
-      display: inline-block;
-      margin: 1rem;
-      padding: 0.8rem 1.5rem;
-      background: #0077cc;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-    .button:hover {
-      background: #00aaff;
-      box-shadow: 0 0 10px #00aaff;
-    }
-    footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #888;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>The 50 Laws of Kali Power</h1>
-    <h2>By Frank Francis aka WKT12</h2>
-    <p><em>The Kali Red Team Tactical Guide for Beginners</em></p>
-  </header>
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">KALI POWER</h1>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link active" data-section="home">HOME</a></li>
+        <li><a href="#laws" class="nav-link" data-section="laws">THE 50 LAWS</a></li>
+        <li><a href="#reference" class="nav-link" data-section="reference">QUICK REFERENCE</a></li>
+        <li><a href="#framework" class="nav-link" data-section="framework">FRAMEWORK</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <img src="cover.jpg" alt="Kali Power Dragon Cover" class="cover" />
+  <section id="home" class="section active">
+    <header class="hero">
+      <h1>THE 50 LAWS OF</h1>
+      <h2 class="title-large">KALI POWER</h2>
+      <h3>Cyber-Ops Tactical Edition</h3>
+      <p class="subtitle">Beginner → Semi-Advanced Red-Team Defensive Mastery</p>
+      <p class="author">By Frank Francis aka WKT12</p>
+      <p class="tagline">Organized & Compiled Edition</p>
+    </header>
 
-  <p>
-    Welcome to the official static page for <strong>The 50 Laws of Kali Power</strong>.<br />
-    This guide introduces beginners to semi‑advanced Kali Linux defensive and red‑team techniques.
-  </p>
+    <div class="cta-section">
+      <a href="#laws" class="button primary">START LEARNING</a>
+      <a href="https://upgrade-linker--usernamewkt12.replit.app/" class="button secondary" target="_blank">INTERACTIVE VERSION</a>
+    </div>
+  </section>
 
-  <a href="https://upgrade-linker--usernamewkt12.replit.app/" class="button" target="_blank">
-    Launch Interactive Version
-  </a>
+  <section id="laws" class="section">
+    <div class="container">
+      <h2 class="section-title">THE 50 LAWS</h2>
+      
+      <div class="part-section">
+        <h3 class="part-title">PART I: FOUNDATION & VISIBILITY (Laws 1–10)</h3>
+        <div class="laws-grid" id="part1"></div>
+      </div>
 
-  <a href="handbook.pdf" class="button" target="_blank">
-    Download Handbook (PDF)
-  </a>
+      <div class="part-section">
+        <h3 class="part-title">PART II: NETWORKING & MONITORING (Laws 11–20)</h3>
+        <div class="laws-grid" id="part2"></div>
+      </div>
 
-  <footer>
+      <div class="part-section">
+        <h3 class="part-title">PART III: DETECTION & HARDENING (Laws 21–30)</h3>
+        <div class="laws-grid" id="part3"></div>
+      </div>
+
+      <div class="part-section">
+        <h3 class="part-title">PART IV: FILESYSTEM & AUTOMATION (Laws 31–40)</h3>
+        <div class="laws-grid" id="part4"></div>
+      </div>
+
+      <div class="part-section">
+        <h3 class="part-title">PART V: PRIVACY, STEALTH & MINDSET (Laws 41–50)</h3>
+        <div class="laws-grid" id="part5"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reference" class="section">
+    <div class="container">
+      <h2 class="section-title">QUICK REFERENCE STUDY GUIDE</h2>
+      <p class="subtitle-text">50 Laws at a Glance — Core Concepts & Key Commands</p>
+      <div id="reference-table"></div>
+    </div>
+  </section>
+
+  <section id="framework" class="section">
+    <div class="container">
+      <h2 class="section-title">THE RED-TEAM DEFENDER FRAMEWORK</h2>
+      <div class="framework-grid" id="framework-content"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
     <p>© 2026 Frank Francis (WKT12) — All Rights Reserved</p>
-    <p>Hosted on GitHub Pages</p>
+    <p>Hosted on GitHub Pages | Cyber-Ops Tactical Edition</p>
   </footer>
+
+  <script src="laws-data.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
